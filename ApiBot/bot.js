@@ -15,10 +15,10 @@ const helpMessage =
 /cat - get a random cat pic
 /cat \`<text>\` - get cat image with text
 /dogbreeds - get list of dog breeds
-/dogs \`<breed>\` - get image of dog breed
+/dog \`<breed>\` - get image of dog breed
 `;
 
-bot.help(ctx => {
+bot.command( ['start', 'help'],ctx => {
   // ctx.reply(helpMessage);
   bot.telegram.sendMessage(ctx.from.id, helpMessage, {
     parse_mode: "markdown"
